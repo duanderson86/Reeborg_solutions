@@ -1,0 +1,48 @@
+from library import turn_right, turn_around, move_5
+
+
+def up_three_steps():
+    repeat 3:
+        turn_left()
+        move()
+        turn_right()
+        move()
+        move()
+def down_three_steps():
+    repeat 3:
+        move()
+        move()
+        turn_left()
+        move()
+        turn_right()
+
+
+
+
+take()
+up_three_steps()
+move()
+put()
+turn_around()
+move()
+while object_here():
+    take()
+else:
+    move()
+    while carries_object():
+        put()
+turn_around()
+move()
+move()
+take()
+turn_around()
+move()
+put()
+move()
+while object_here():
+    take()
+else:
+    turn_around()
+    move()
+    turn_around()
+down_three_steps()
