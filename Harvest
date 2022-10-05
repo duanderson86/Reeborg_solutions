@@ -1,0 +1,35 @@
+from library import turn_right, turn_around, move_5
+rows_harvested = 0
+def harvest_row():
+    rows_planted = 0
+    while front_is_clear():
+        while object_here():
+            take()
+        else:
+            while rows_planted < 6:
+                put()
+                rows_planted += 1
+                break
+            move()
+
+
+move()
+move()
+turn_left()
+move()
+move()
+while rows_harvested < 6:
+    harvest_row()
+    rows_harvested += 1
+    if not rows_harvested % 2 == 0:
+        turn_right()
+        move()
+        turn_right()
+        move()
+        move()
+    else:
+        turn_left()
+        move()
+        turn_left()
+        move()
+        move()
